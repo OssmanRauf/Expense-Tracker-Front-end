@@ -33,7 +33,7 @@ const Home = ({ setComponentToShow }: ComponentProps) => {
 			setUser(response);
 			setTransactions(response.transactions);
 		} else {
-			console.log(response);
+			//console.log(response);
 		}
 	};
 	useEffect(() => {
