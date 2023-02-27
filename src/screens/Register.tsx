@@ -32,15 +32,12 @@ const Register = ({ setComponentToShow }: ComponentProps) => {
 			}),
 		});
 		const response = await res.json();
-		console.log(response);
 
 		if (res.status === 200) {
 			sessionStorage.setItem("user", JSON.stringify(response.access_token));
 			setComponentToShow("login");
-			console.log("good", response);
 		} else {
 			setErrorMsg(response.detail);
-			console.log("bad", response);
 
 			setShowError(true);
 			setTimeout(() => {

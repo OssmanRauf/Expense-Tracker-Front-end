@@ -16,8 +16,6 @@ const Modal = ({
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
 		const form = new FormData(e.target);
-		console.log();
-
 		const json = {
 			is_income: form.get("option"),
 			description: form.get("description"),
@@ -25,7 +23,7 @@ const Modal = ({
 		};
 		const token: any = sessionStorage.getItem("user");
 
-		const result = await fetch(`${info.baseUrl}/transactions`, {
+		const result = await fetch(`${info.baseUrl}/transactions/`, {
 			method: "POST",
 			headers: {
 				accept: "application/json",

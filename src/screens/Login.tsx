@@ -7,7 +7,6 @@ interface ComponentProps {
 	showBackBtn: Boolean;
 	setIsLogedIn: Function;
 }
-console.log(info);
 
 const Login = ({
 	setComponentToShow,

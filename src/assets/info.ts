@@ -1,4 +1,4 @@
 const info = {
-	baseUrl: "http://127.0.0.1:8000",
+	baseUrl: "https://web-production-4dd3.up.railway.app",
 };
 export { info };

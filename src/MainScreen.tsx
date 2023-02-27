@@ -8,12 +8,10 @@ const Main = () => {
 
 	useEffect(() => {
 		const token = sessionStorage.getItem("user");
-		console.log(token);
 
 		if (!token) {
 			setComponentToShow("login");
 			setIsLogedIn(false);
-			console.log("jjj");
 		} else {
 			setComponentToShow("home");
 		}

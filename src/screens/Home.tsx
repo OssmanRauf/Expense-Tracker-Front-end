@@ -22,7 +22,7 @@ const Home = ({ setComponentToShow }: ComponentProps) => {
 	const [showModal, setShowModal] = useState(false);
 	const makeApiCall = async () => {
 		const token: any = sessionStorage.getItem("user");
-		const res = await fetch(`${info.baseUrl}/users`, {
+		const res = await fetch(`${info.baseUrl}/users/`, {
 			headers: {
 				accept: "application/json",
 				Authorization: `Bearer ${token}`,
@@ -32,10 +32,8 @@ const Home = ({ setComponentToShow }: ComponentProps) => {
 		if (res.status === 200) {
 			setUser(response);
 			setTransactions(response.transactions);
-
-			console.log(user);
 		} else {
-			console.log("gg ", response);
+			console.log(response);
 		}
 	};
 	useEffect(() => {
